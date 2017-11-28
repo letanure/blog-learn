@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Top 10 ES6 features by example | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Top 10 ES6 features by exampleSummary 1. const and let keywords var have function scope and are hoisted to the top. let and const have block scope (surrounded b">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Top 10 ES6 features by example">
+<meta property="og:url" content="http://yoursite.com/2017/11/28/top-10-ES6-features-by-example/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Top 10 ES6 features by exampleSummary 1. const and let keywords var have function scope and are hoisted to the top. let and const have block scope (surrounded by {})  123456789101112131415161718functi">
+<meta property="og:updated_time" content="2017-11-28T22:09:13.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Top 10 ES6 features by example">
+<meta name="twitter:description" content="Top 10 ES6 features by exampleSummary 1. const and let keywords var have function scope and are hoisted to the top. let and const have block scope (surrounded by {})  123456789101112131415161718functi">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-top-10-ES6-features-by-example" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/top-10-ES6-features-by-example/" class="article-date">
+  <time datetime="2017-11-28T21:27:23.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Top 10 ES6 features by example
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Top-10-ES6-features-by-example"><a href="#Top-10-ES6-features-by-example" class="headerlink" title="Top 10 ES6 features by example"></a><a href="https://blog.pragmatists.com/top-10-es6-features-by-example-80ac878794bb" target="_blank" rel="noopener">Top 10 ES6 features by example</a></h2><p>Summary</p>
+<h3 id="1-const-and-let-keywords"><a href="#1-const-and-let-keywords" class="headerlink" title="1. const and let keywords"></a>1. const and let keywords</h3><ul>
+<li><code>var</code> have function scope and are hoisted to the top.</li>
+<li><code>let</code> and <code>const</code> have block scope (surrounded by <code>{}</code>)</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> x = <span class="number">1</span></span><br><span class="line">  <span class="keyword">let</span> y = <span class="number">2</span></span><br><span class="line">  <span class="keyword">const</span> z = <span class="number">3</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">var</span> x = <span class="number">100</span></span><br><span class="line">    <span class="keyword">let</span> y = <span class="number">200</span></span><br><span class="line">    <span class="keyword">const</span> z = <span class="number">300</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'x in block scope is'</span>, x)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'y in block scope is'</span>, y)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'z in block scope is'</span>, z)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'x outside of block scope is'</span>, x)</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'y outside of block scope is'</span>, y)</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'z outside of block scope is'</span>, z)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f()</span><br></pre></td></tr></table></figure>
+<p>Result:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x <span class="keyword">in</span> block scope is <span class="number">100</span> </span><br><span class="line">y <span class="keyword">in</span> block scope is <span class="number">200</span> </span><br><span class="line">z <span class="keyword">in</span> block scope is <span class="number">300</span> </span><br><span class="line">x outside <span class="keyword">of</span> block scope is <span class="number">100</span> </span><br><span class="line">y outside <span class="keyword">of</span> block scope is <span class="number">2</span> </span><br><span class="line">z outside <span class="keyword">of</span> block scope is <span class="number">3</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-Array-helper-functions"><a href="#2-Array-helper-functions" class="headerlink" title="2. Array helper functions"></a>2. Array helper functions</h3><h4 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a><code>forEach</code></h4><ul>
+<li>just iterate, <code>undefined</code> return.</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>, <span class="string">'green'</span>, <span class="string">'blue'</span>]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">print</span>(<span class="params">val</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(val)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">colors.forEach(print)</span><br></pre></td></tr></table></figure>
+<p>Result:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">red </span><br><span class="line">green </span><br><span class="line">blue</span><br></pre></td></tr></table></figure>
+<h4 id="map"><a href="#map" class="headerlink" title="map"></a><code>map</code></h4><ul>
+<li>returns a new <code>array</code> with same number of elements</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>, <span class="string">'green'</span>, <span class="string">'blue'</span>]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">capitalize</span>(<span class="params">val</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> val.toUpperCase()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> capitalizedColors = colors.map(capitalize)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(capitalizedColors)</span><br></pre></td></tr></table></figure>
+<p>Result:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">"RED"</span>,<span class="string">"GREEN"</span>,<span class="string">"BLUE"</span>]</span><br></pre></td></tr></table></figure>
+<h4 id="filter"><a href="#filter" class="headerlink" title="filter"></a><code>filter</code></h4><ul>
+<li>returns a new <code>array</code> filtered.</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> values = [<span class="number">1</span>, <span class="number">60</span>, <span class="number">34</span>, <span class="number">30</span>, <span class="number">20</span>, <span class="number">5</span>]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">lessThan20</span>(<span class="params">val</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> val &lt; <span class="number">20</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> valuesLessThan20 = values.filter(lessThan20)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(valuesLessThan20)</span><br></pre></td></tr></table></figure>
+<p>Result:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>,<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+<h4 id="find"><a href="#find" class="headerlink" title="find"></a><code>find</code></h4><ul>
+<li>returns the first matched element <strong>or</strong> <code>undefined</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> people = [</span><br><span class="line">  &#123;<span class="attr">name</span>: <span class="string">'Jack'</span>, <span class="attr">age</span>: <span class="number">50</span>&#125;,</span><br><span class="line">  &#123;<span class="attr">name</span>: <span class="string">'Michael'</span>, <span class="attr">age</span>: <span class="number">9</span>&#125;, </span><br><span class="line">  &#123;<span class="attr">name</span>: <span class="string">'John'</span>, <span class="attr">age</span>: <span class="number">40</span>&#125;, </span><br><span class="line">  &#123;<span class="attr">name</span>: <span class="string">'Ann'</span>, <span class="attr">age</span>: <span class="number">19</span>&#125;, </span><br><span class="line">  &#123;<span class="attr">name</span>: <span class="string">'Elisabeth'</span>, <span class="attr">age</span>: <span class="number">16</span>&#125;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">teenager</span>(<span class="params">person</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> person.age &gt; <span class="number">10</span> &amp;&amp; person.age &lt; <span class="number">20</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> firstTeenager = people.find(teenager)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'First found teenager:'</span>, firstTeenager.name)</span><br></pre></td></tr></table></figure>
+<p>Result:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">First found teenager: Ann</span><br></pre></td></tr></table></figure>
+<h4 id="every"><a href="#every" class="headerlink" title="every"></a><code>every</code></h4><ul>
+<li>Checks if every element of the array passes the test implemented by the provided function, which should return <code>true</code> or <code>false</code>.</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> people = [</span><br><span class="line">  &#123;<span class="attr">name</span>: <span class="string">'Jack'</span>, <span class="attr">age</span>: <span class="number">50</span>&#125;,</span><br><span class="line">  &#123;<span class="attr">name</span>: <span class="string">'Michael'</span>, <span class="attr">age</span>: <span class="number">9</span>&#125;, </span><br><span class="line">  &#123;<span class="attr">name</span>: <span class="string">'John'</span>, <span class="attr">age</span>: <span class="number">40</span>&#125;, </span><br><span class="line">  &#123;<span class="attr">name</span>: <span class="string">'Ann'</span>, <span class="attr">age</span>: <span class="number">19</span>&#125;, </span><br><span class="line">  &#123;<span class="attr">name</span>: <span class="string">'Elisabeth'</span>, <span class="attr">age</span>: <span class="number">16</span>&#125;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">teenager</span>(<span class="params">person</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> person.age &gt; <span class="number">10</span> &amp;&amp; person.age &lt; <span class="number">20</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> everyoneIsTeenager = people.every(teenager)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Everyone is teenager: '</span>, everyoneIsTeenager)</span><br></pre></td></tr></table></figure>
+<p>Result:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Everyone is teenager:  <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h4 id="some"><a href="#some" class="headerlink" title="some"></a><code>some</code></h4><ul>
+<li>Checks if any element of the array passes the test implemented by the provided function, which should return true or false.</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> people = [</span><br><span class="line">  &#123;<span class="attr">name</span>: <span class="string">'Jack'</span>, <span class="attr">age</span>: <span class="number">50</span>&#125;,</span><br><span class="line">  &#123;<span class="attr">name</span>: <span class="string">'Michael'</span>, <span class="attr">age</span>: <span class="number">9</span>&#125;, </span><br><span class="line">  &#123;<span class="attr">name</span>: <span class="string">'John'</span>, <span class="attr">age</span>: <span class="number">40</span>&#125;, </span><br><span class="line">  &#123;<span class="attr">name</span>: <span class="string">'Ann'</span>, <span class="attr">age</span>: <span class="number">19</span>&#125;, </span><br><span class="line">  &#123;<span class="attr">name</span>: <span class="string">'Elisabeth'</span>, <span class="attr">age</span>: <span class="number">16</span>&#125;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">teenager</span>(<span class="params">person</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> person.age &gt; <span class="number">10</span> &amp;&amp; person.age &lt; <span class="number">20</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> thereAreTeenagers = people.some(teenager)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'There are teenagers:'</span>, thereAreTeenagers)</span><br></pre></td></tr></table></figure>
+<p>Result:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">There are teenagers: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h4 id="reduce"><a href="#reduce" class="headerlink" title="reduce"></a><code>reduce</code></h4><ul>
+<li>Applies a function passed as the first parameter against an accumulator and each element in the array (from left to right), thus reducing it to a single value. The initial value of the accumulator should be provided as the second parameter of the reduce function.</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">acc, value</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> acc + value</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">product</span>(<span class="params">acc, value</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> acc * value</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> sumOfArrayElements = array.reduce(sum, <span class="number">0</span>)</span><br><span class="line"><span class="keyword">var</span> productOfArrayElements = array.reduce(product, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Sum of'</span>, array, <span class="string">'is'</span>, sumOfArrayElements)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Product of'</span>, array, <span class="string">'is'</span>, productOfArrayElements)</span><br></pre></td></tr></table></figure>
+<p>Result:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Sum <span class="keyword">of</span> [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>] is <span class="number">10</span> </span><br><span class="line">Product <span class="keyword">of</span> [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>] is <span class="number">24</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-Arrow-functions"><a href="#3-Arrow-functions" class="headerlink" title="3. Arrow functions"></a>3. Arrow functions</h3><ul>
+<li>functions with inherited scope</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> sum = <span class="function">(<span class="params">acc, value</span>) =&gt;</span> acc + value</span><br><span class="line"><span class="keyword">const</span> product = <span class="function">(<span class="params">acc, value</span>) =&gt;</span> acc * value</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> sumOfArrayElements = array.reduce(sum, <span class="number">0</span>)</span><br><span class="line"><span class="keyword">var</span> productOfArrayElements = array.reduce(product, <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<p>inline:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> sumOfArrayElements = array.reduce(<span class="function">(<span class="params">acc, value</span>) =&gt;</span> acc + value, <span class="number">0</span>)</span><br><span class="line"><span class="keyword">var</span> productOfArrayElements = array.reduce(<span class="function">(<span class="params">acc, value</span>) =&gt;</span> acc * value, <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<p>complex:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> sum = <span class="function">(<span class="params">acc, value</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> result = acc + value</span><br><span class="line">  <span class="built_in">console</span>.log(acc, <span class="string">' plus '</span>, value, <span class="string">' is '</span>, result)</span><br><span class="line">  <span class="keyword">return</span> result</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> sumOfArrayElements = array.reduce(sum, <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="4-Classes"><a href="#4-Classes" class="headerlink" title="4. Classes"></a>4. Classes</h3><ul>
+<li>syntactic sugar for prototypal inheritance.</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(x, y) &#123;</span><br><span class="line">        <span class="keyword">this</span>.x = x</span><br><span class="line">        <span class="keyword">this</span>.y = y</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    toString() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'[X='</span> + <span class="keyword">this</span>.x + <span class="string">', Y='</span> + <span class="keyword">this</span>.y + <span class="string">']'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ColorPoint</span> <span class="keyword">extends</span> <span class="title">Point</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">default</span>() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ColorPoint(<span class="number">0</span>, <span class="number">0</span>, <span class="string">'black'</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">constructor</span>(x, y, color) &#123;</span><br><span class="line">        <span class="keyword">super</span>(x, y)</span><br><span class="line">        <span class="keyword">this</span>.color = color</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    toString() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'[X='</span> + <span class="keyword">this</span>.x + <span class="string">', Y='</span> + <span class="keyword">this</span>.y + <span class="string">', color='</span> + <span class="keyword">this</span>.color + <span class="string">']'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'The first point is '</span> + <span class="keyword">new</span> Point(<span class="number">2</span>, <span class="number">10</span>))</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'The second point is '</span> + <span class="keyword">new</span> ColorPoint(<span class="number">2</span>, <span class="number">10</span>, <span class="string">'green'</span>))</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'The default color point is '</span> + ColorPoint.default())</span><br></pre></td></tr></table></figure>
+<p>Result</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The first point is [X=<span class="number">2</span>, Y=<span class="number">10</span>] </span><br><span class="line">The second point is [X=<span class="number">2</span>, Y=<span class="number">10</span>, color=green] </span><br><span class="line">The <span class="keyword">default</span> color point is [X=<span class="number">0</span>, Y=<span class="number">0</span>, color=black]</span><br></pre></td></tr></table></figure>
+<h3 id="5-Enhanced-object-literals"><a href="#5-Enhanced-object-literals" class="headerlink" title="5. Enhanced object literals"></a>5. Enhanced object literals</h3><p>Object literals enhanced.</p>
+<ul>
+<li>define fields with variable assignment of the same name</li>
+<li>define functions</li>
+<li>define dynamic (calculated) properties</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> color = <span class="string">'red'</span></span><br><span class="line"><span class="keyword">const</span> point = &#123;</span><br><span class="line">  x: <span class="number">5</span>,</span><br><span class="line">  y: <span class="number">10</span>,</span><br><span class="line">  color,</span><br><span class="line">  toString() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'X='</span> + <span class="keyword">this</span>.x + <span class="string">', Y='</span> + <span class="keyword">this</span>.y + <span class="string">', color='</span> + <span class="keyword">this</span>.color</span><br><span class="line">  &#125;,</span><br><span class="line">  [ <span class="string">'prop_'</span> + <span class="number">42</span> ]: <span class="number">42</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'The point is '</span> + point)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'The dynamic property is '</span> + point.prop_42)</span><br></pre></td></tr></table></figure>
+<p>Result:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">The point is X=<span class="number">5</span>, Y=<span class="number">10</span>, color=red </span><br><span class="line">The dynamic property is <span class="number">42</span></span><br></pre></td></tr></table></figure>
+<h3 id="6-Template-strings"><a href="#6-Template-strings" class="headerlink" title="6. Template strings"></a>6. Template strings</h3><ul>
+<li>multi-line text too</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params">firstName, lastName</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">`Good morning <span class="subst">$&#123;firstName&#125;</span> <span class="subst">$&#123;lastName&#125;</span>! </span></span><br><span class="line"><span class="string">How are you?`</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(hello(<span class="string">'Jan'</span>, <span class="string">'Kowalski'</span>))</span><br></pre></td></tr></table></figure>
+<p>Result:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Good morning Jan Kowalski! </span><br><span class="line">How are you?</span><br></pre></td></tr></table></figure>
+<h3 id="7-Default-function-arguments"><a href="#7-Default-function-arguments" class="headerlink" title="7. Default function arguments"></a>7. Default function arguments</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sort</span>(<span class="params">arr = [], direction = <span class="string">'ascending'</span></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'I\'m going to sort the array'</span>, arr, direction)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sort([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line">sort([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="string">'descending'</span>)</span><br></pre></td></tr></table></figure>
+<p>Result:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">I<span class="string">'m going to sort the array [1,2,3] ascending </span></span><br><span class="line"><span class="string">I'</span>m going to sort the array [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] descending</span><br></pre></td></tr></table></figure>
+<h3 id="8-Rest-and-spread-operators"><a href="#8-Rest-and-spread-operators" class="headerlink" title="8. Rest and spread operators"></a>8. Rest and spread operators</h3><p>It enables extraction of array or object content as single elements.</p>
+<h4 id="Spread"><a href="#Spread" class="headerlink" title="Spread"></a><code>Spread</code></h4><p>Example — make shallow copy of array:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="string">'red'</span>, <span class="string">'blue'</span>, <span class="string">'green'</span>]</span><br><span class="line"><span class="keyword">var</span> copyOfArray = [...array]</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Copy of'</span>, array, <span class="string">'is'</span>, copyOfArray)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Are'</span>, array, <span class="string">'and'</span>, copyOfArray, <span class="string">'same?'</span>, array === copyOfArray)</span><br></pre></td></tr></table></figure>
+<p>Result</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Copy <span class="keyword">of</span> [<span class="string">"red"</span>,<span class="string">"blue"</span>,<span class="string">"green"</span>] is [<span class="string">"red"</span>,<span class="string">"blue"</span>,<span class="string">"green"</span>] </span><br><span class="line">Are [<span class="string">"red"</span>,<span class="string">"blue"</span>,<span class="string">"green"</span>] and [<span class="string">"red"</span>,<span class="string">"blue"</span>,<span class="string">"green"</span>] same? <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<p>Example — merge arrays:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> defaultColors = [<span class="string">'red'</span>, <span class="string">'blue'</span>, <span class="string">'green'</span>]</span><br><span class="line"><span class="keyword">var</span> userDefinedColors = [<span class="string">'yellow'</span>, <span class="string">'orange'</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> mergedColors = [...defaultColors, ...userDefinedColors]</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Merged colors'</span>, mergedColors)</span><br></pre></td></tr></table></figure>
+<p>Result</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Merged colors [<span class="string">"red"</span>,<span class="string">"blue"</span>,<span class="string">"green"</span>,<span class="string">"yellow"</span>,<span class="string">"orange"</span>]</span><br></pre></td></tr></table></figure>
+<h4 id="Rest"><a href="#Rest" class="headerlink" title="Rest"></a><code>Rest</code></h4><ul>
+<li>spread in function parameters</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">printColors</span>(<span class="params">first, second, third, ...others</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Top three colors are '</span> + first + <span class="string">', '</span> + second + <span class="string">' and '</span> + third + <span class="string">'. Others are: '</span> + others)</span><br><span class="line">&#125;</span><br><span class="line">printColors(<span class="string">'yellow'</span>, <span class="string">'blue'</span>, <span class="string">'orange'</span>, <span class="string">'white'</span>, <span class="string">'black'</span>)</span><br></pre></td></tr></table></figure>
+<p>Result</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Top three colors are yellow, blue and orange. Others are: white,black</span><br></pre></td></tr></table></figure>
+<h3 id="9-Destructuring"><a href="#9-Destructuring" class="headerlink" title="9. Destructuring"></a>9. Destructuring</h3><h4 id="Destructuring-array"><a href="#Destructuring-array" class="headerlink" title="Destructuring array"></a>Destructuring array</h4><p>Enables extraction of requested elements from the array and assigning them to variables.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">printFirstAndSecondElement</span>(<span class="params">[first, second]</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'First element is '</span> + first + <span class="string">', second is '</span> + second)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">printSecondAndFourthElement</span>(<span class="params">[, second, , fourth]</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Second element is '</span> + second + <span class="string">', fourth is '</span> + fourth)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"></span><br><span class="line">printFirstAndSecondElement(array)</span><br><span class="line">printSecondAndFourthElement(array)</span><br></pre></td></tr></table></figure>
+<p>Result </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">First element is <span class="number">1</span>, second is <span class="number">2</span> </span><br><span class="line">Second element is <span class="number">2</span>, fourth is <span class="number">4</span></span><br></pre></td></tr></table></figure>
+<h4 id="Destructuring-object"><a href="#Destructuring-object" class="headerlink" title="Destructuring object"></a>Destructuring object</h4><p>Enables extraction of requested properties from the object and assigning them to variables of the same name as properties.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">printBasicInfo</span>(<span class="params">&#123;firstName, secondName, profession&#125;</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(firstName + <span class="string">' '</span> + secondName + <span class="string">' - '</span> + profession)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">  firstName: <span class="string">'John'</span>,</span><br><span class="line">  secondName: <span class="string">'Smith'</span>,</span><br><span class="line">  age: <span class="number">33</span>,</span><br><span class="line">  children: <span class="number">3</span>,</span><br><span class="line">  profession: <span class="string">'teacher'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">printBasicInfo(person)</span><br></pre></td></tr></table></figure>
+<p>Result </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">John Smith - teacher</span><br></pre></td></tr></table></figure>
+<h3 id="10-Promises"><a href="#10-Promises" class="headerlink" title="10. Promises"></a>10. Promises</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">asyncFunc</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">          <span class="keyword">const</span> result = <span class="built_in">Math</span>.random();</span><br><span class="line">          result &gt; <span class="number">0.5</span> ? resolve(result) : reject(<span class="string">'Oppps....I cannot calculate'</span>)</span><br><span class="line">        &#125;, <span class="number">1</span>)</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++) &#123;</span><br><span class="line">  asyncFunc()</span><br><span class="line">      .then(<span class="function"><span class="params">result</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'Result is: '</span> + result))</span><br><span class="line">      .catch(<span class="function"><span class="params">result</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'Error: '</span> + result))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Result</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Result is: <span class="number">0.7930997430022211</span> </span><br><span class="line"><span class="built_in">Error</span>: Oppps....I cannot calculate </span><br><span class="line">Result is: <span class="number">0.6412258210597288</span> </span><br><span class="line">Result is: <span class="number">0.7890325910244533</span> </span><br><span class="line"><span class="built_in">Error</span>: Oppps....I cannot calculate </span><br><span class="line"><span class="built_in">Error</span>: Oppps....I cannot calculate </span><br><span class="line">Result is: <span class="number">0.8619834683310168</span> </span><br><span class="line"><span class="built_in">Error</span>: Oppps....I cannot calculate </span><br><span class="line"><span class="built_in">Error</span>: Oppps....I cannot calculate </span><br><span class="line">Result is: <span class="number">0.8258410427354488</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/top-10-ES6-features-by-example/" data-id="cjak6mpf40000qtgqly58kwzf" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/28/useful-links/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Useful links
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/28/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/28/useful-links/">Useful links</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/top-10-ES6-features-by-example/">Top 10 ES6 features by example</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
